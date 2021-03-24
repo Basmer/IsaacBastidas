@@ -541,13 +541,13 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="card-body">
-                          <form action="https://formspree.io/your@email.com" method="POST">
+                          <form id="formContact" onsubmit="event.preventDefault()">
                             <div class="p pb-3"><strong>No dude en ponerse en contacto conmigo</strong></div>
                             <div class="row mb-3">
                               <div class="col">
                                 <div class="input-group"><span class="input-group-addon"><i
                                     class="fa fa-user-circle"></i></span>
-                                  <input class="form-control" type="text" name="name" placeholder="Nombre"
+                                  <input class="form-control" type="text" name="nombre" placeholder="Nombre"
                                          required="required"/>
                                 </div>
                               </div>
@@ -556,7 +556,7 @@
                               <div class="col">
                                 <div class="input-group"><span class="input-group-addon"><i
                                     class="fa fa-file-text"></i></span>
-                                  <input class="form-control" type="text" name="Motivo" placeholder="Motivo"
+                                  <input class="form-control" type="text" name="asunto" placeholder="Motivo"
                                          required="required"/>
                                 </div>
                               </div>
@@ -565,7 +565,7 @@
                               <div class="col">
                                 <div class="input-group"><span class="input-group-addon"><i
                                     class="fa fa-envelope"></i></span>
-                                  <input class="form-control" type="email" name="_replyto" placeholder="E-mail"
+                                  <input class="form-control" type="email" name="correo" placeholder="E-mail"
                                          required="required"/>
                                 </div>
                               </div>
@@ -573,14 +573,14 @@
                             <div class="row mb-3">
                               <div class="col">
                                 <div class="form-group">
-                                <textarea class="form-control" name="message" placeholder="Deja aqui tu comentario"
+                                <textarea class="form-control" name="mensaje" placeholder="Deja aqui tu comentario"
                                           required="required"></textarea>
                                 </div>
                               </div>
                             </div>
                             <div class="row">
                               <div class="col">
-                                <button class="btn btn-primary" type="submit">Enviar</button>
+                                <button id="btnContact" class="btn btn-primary" type="submit">Enviar</button>
                               </div>
                             </div>
                           </form>

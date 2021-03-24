@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.3",
+        "rlanvin/php-form": "2.*"
+    }
+}
