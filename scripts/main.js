@@ -8,12 +8,18 @@ $(document).ready(function () {
     }); // initialize animate on scroll library
 
     $("#btnContact").click(() => {
+        $("#btnContact").attr("disabled", true);
         const form = document.getElementById("formContact");
         const dataForm = new FormData(form);
         const request = new XMLHttpRequest();
         request.open('POST', 'api/contact.php');
         request.onload = event => {
-            console.log(event.target.response)
+            const data = JSON.parse(event.target.response);
+            if(parseInt(data["code"]) === 0x0000fc11) {
+                $("#modalComplete").modal('show');
+            }
+            $("#btnContact").attr("disabled", false);
+            form.reset();
         }
         request.send(dataForm);
 
