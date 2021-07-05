@@ -1,0 +1,24 @@
+RewriteEngine on
+ErrorDocument 404 /assets/pages/PHP404.html
+ErrorDocument 403 /assets/pages/PHP403.html
+RedirectMatch 404 ^/vendor/?$
+RedirectMatch 404 ^/src/?$
+RedirectMatch 404 ^/legacy/?$
+RedirectMatch 404 ^/test/?$
+RewriteCond %{HTTP:Authorization} ^(.+)$
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
+RewriteRule ^(.*)$ index.php/$1
+Options -Indexes
+
+<FilesMatch "\.(dist|db|markdown|md|twig|yaml|yml|phar|bat|sh|txt|sql)|(bower|composer|jsdoc|package)\.json$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</FilesMatch>
