@@ -1,0 +1,15 @@
+{
+  "experiencia": [
+    {
+      "fecha": "Abril 2021 - Actualmente",
+      "lugar": "PMM Paqueteria y Mensajeria",
+      "puesto": "Desarrollador Movil en Android",
+      "descripcion": "Trabajo como desarrollador móvil en el desarrollo de una nueva versión de la aplicación de reparto de entregas para los choferes con el objetivo de optimizar más su trabajo y el desarrollo de servicios web como parte de la mejora de todo los sistemas de PMM a nuevas tecnologías"
+    }
+  ],
+  "contacto": {
+    "email": "carlossant47@hotmail.com",
+    "telefono": "6692492959",
+    "direccion": "Mazatlan, Sinaloa, Mexico"
+  }
+}
