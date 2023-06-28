@@ -26,9 +26,9 @@
  */
 
 :root {
-  --color-primary: #283593;
-  --color-dark-primary: #001064;
-  --color-light-primary: #5f5fc4;
+  --color-primary: #607D8B;
+  --color-dark-primary: #455A64;
+  --color-light-primary: #CFD8DC;
   --color-gradent: linear-gradient(0deg, rgba(44, 44, 44, 0.2), #28359370);
   --color-gradent-progres: #28359370;
   --color-font-color: #f2f2f2;
